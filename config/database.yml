@@ -14,7 +14,7 @@ default: &default
   encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 #  username: root
- # password: password
+  password: password
   host: db
 
 development:
@@ -50,6 +50,6 @@ test:
 production:
   <<: *default
   database: gomisutenavi_production
-  username: gomisutenavi
+  username: root
   password: <%= ENV['GOMISUTENAVI_DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
